@@ -1,14 +1,8 @@
 import pandas as pd
 import numpy as np
-import datetime
 import mysql.connector
 import psycopg2
 from datetime import datetime, timedelta
-from openpyxl import load_workbook
-from tqdm import tqdm
-from time import sleep
-from decimal import Decimal
-from psycopg2.extras import execute_batch
 import PY0012_CODE as cc
 import PY0002_ACCOUNT as ac
 import streamlit as st
