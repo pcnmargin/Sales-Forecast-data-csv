@@ -1,31 +1,18 @@
 import pandas as pd
-import gspread_dataframe as gd
 import numpy as np
 import datetime
 import mysql.connector
 import psycopg2
-import xlsxwriter
-import openpyxl
 from datetime import datetime, timedelta
-import schedule
-import time
-import os
 from openpyxl import load_workbook
-import requests
 from tqdm import tqdm
-import subprocess
 from time import sleep
-import calendar
 from decimal import Decimal
-import threading
-import signal
-import platform
 from psycopg2.extras import execute_batch
 import PY0012_CODE as cc
 import PY0002_ACCOUNT as ac
 import streamlit as st
 import matplotlib.pyplot as plt
-import seaborn
 
 
 @st.cache_data(ttl=3600)
