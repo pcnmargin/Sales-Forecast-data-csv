@@ -1,12 +1,9 @@
 import streamlit as st
-import PY0019_REVENUE_LOCAL as rl
 import mysql.connector
 import PY0002_ACCOUNT as ac
-
-import streamlit as st
-import mysql.connector
 from mysql.connector import Error
-
+import pytz
+import datetime
 # Kết nối đến MySQL database
 def create_connection():
     try:
@@ -57,7 +54,10 @@ def insert_feedback(connection, feedback):
         st.success("Đã lưu ý kiến thành công!")
     except Error as e:
         st.error(f"Không thể lưu ý kiến: {e}")
-
+# Lấy thời gian hiện tại theo múi giờ Hồ Chí Minh
+def get_current_time_in_hcm():
+    tz = pytz.timezone('Asia/Ho_Chi_Minh')
+    return datetime.now(tz)
 # Tạo giao diện người dùng với Streamlit
 def main():
     st.title("Thu thập ý kiến đánh giá của khách hàng")
