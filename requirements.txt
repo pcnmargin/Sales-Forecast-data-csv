@@ -3,4 +3,3 @@ numpy
 datetime
 mysql.connector
 psycopg2-binary
-matplotlib.pyplot
